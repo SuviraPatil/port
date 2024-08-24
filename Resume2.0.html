@@ -1,0 +1,1023 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Resume</title>
+	<!---custom css link--->
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lato:wght@300&family=Poppins&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #020312;
+    --text-color: #fff;
+    --main-color: #eb4a4a;
+    --second-color: gray;
+    --other-color: #12141c;
+    --h1-font: 5.2rem;
+    --h2-font: 3.5rem;
+    --p-font: 1.1rem;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 22px 16%;
+    border-bottom: 1px solid transparent;
+    transition: all .40s ease;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: bold;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+}
+.navbar a:hover{
+    background: var(--main-color);
+    color: var(--text-color);
+}
+#menu-icon{
+    font-size: 36px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 160px 16% 90px;
+}
+.home{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background: url(../img/bg1.jpg); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+/* .home-text{
+    margin-left: 60%;
+} */
+.home-text h1{
+    margin: 15px 0;
+    font-size: var(--h1-font);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+span{
+    color: var(--main-color);
+}
+.home-text h4{
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+.home-text h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+.btn{
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 0.5rem;
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+    transition: all .40s ease;
+}
+.btn:hover{
+    transform: scale(1.01) translateY(-5px);
+    background: transparent;
+    border: 1px solid var(--main-color);
+}
+
+header.sticky{
+    padding: 10px 16%;
+    background: var(--bg-color);
+    border-bottom: 1px solid #0e1630;
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.about-text h4{
+    margin: 10px 0;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+.about-text h2{
+    font-size: var(--h2-font);
+}
+.about-text p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.about-gri{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.about-in h5{
+    font-size: 22px;
+    font-weight: 600;
+}
+.about-img img{
+    height: auto;
+    width: 100%;
+    max-width: 460px;
+}
+
+.main-text{
+    text-align: center;
+}
+.main-text h2{
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+}
+.main-text h4{
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+.services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.box{
+    padding: 45px;
+    background: #12141c;
+    border-top: 5px solid transparent;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+    cursor: pointer;
+}
+.box h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 15px 0;
+    transition: all .40s ease;
+}
+.box p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+}
+.box:hover{
+    transform: scale(1.01) translateY(-5px);
+    border-top: 5px solid var(--main-color);
+}
+.box:hover h3{
+    color: var(--main-color);
+}
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.row img{
+    height: auto;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.row{
+    padding: 25px;
+    background: #12141c;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+}
+.main-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.row h3{
+    font-size: 25px;
+    font-weight: 700;
+}
+.row h6{
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.row-icon i{
+    font-size: 21px;
+}
+.row:hover{
+    transform: scale(1.01) translateY(-5px);
+    cursor: pointer;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+.contact-text h4{
+    margin: 15px 0;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact-text h2{
+    font-size: var(--h2-font);
+}
+.contact-text p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+.contact-list{
+    margin-bottom: 3rem;
+}
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list li a{
+    display: block;
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    transition: all .40s ease;
+}
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: var(--main-color);
+}
+.contact-icons i{
+    height: 40px;
+    width: 40px;
+    background: #12141c;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: all .40s ease;
+}
+.contact-icons i:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: var(--text-color);
+    background: var(--main-color);
+}
+
+/* .contact-form form{
+    position: relative;
+}
+.contact-form form input,
+form textarea{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    background: #12141c;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+.contact-form form .send{
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    background: var(--main-color);
+    color: var(--text-color);
+    width: 190px;
+    transition: all .40s ease;
+    cursor: pointer;
+} */
+
+.last-text p{
+    text-align: center;
+    padding: 15px;
+    color: var(--second-color);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+.top i{
+    color: var(--text-color);
+    background: var(--main-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 1325px){
+    header{
+        padding: 16px 3%;
+    }
+    header.sticky{
+        padding: 8px 3%;
+    }
+    section{
+        padding: 130px 3% 60px;
+    }
+}
+
+@media (max-width: 970px){
+    :root{
+        --h1-font: 4.2rem;
+      --h2-font: 2.9rem;
+      --p-font: 1rem;
+    }
+    section{
+        padding: 70px 3% 60px;
+    }
+    .home{
+        height: 85vh;
+    }
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about-img{
+        text-align: center;
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 830px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: -600px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: #12141c;
+        text-align: left;
+        transition: all .40s ease;
+    }
+    .navbar a{
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    :root{
+        --h1-font: 3.7rem;
+      --h2-font: 2.7rem;
+    }
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/10){
+    .back-video{
+        width: 110%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/10){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+img{
+    height:150px;
+    width: 150px;
+}
+
+.tech-skills h2{
+    font-size: var(--h2-font);
+    text-align: center;
+}
+
+.skills{
+    box-sizing: border-box;
+}
+
+.diff-skills::after {
+    content: &quot;&quot;
+    display: table;
+    clear: both;
+}
+
+.skill-item{
+    float: left;
+    width: 14.28%;
+    height: 90%;
+    padding: 8px;
+} 
+
+ @media (max-width:660px){
+    .skill-item img{
+        height:90%;
+        width:90%;
+    }
+    .tech-skills h2{
+        font-size: var(--h2-font);
+    }
+}
+
+/* Technical Skills CSS */
+*{
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box; 
+   font-family: 'Roboto', sans-serif;
+}
+
+.inner{
+    padding-top: 20px;
+}
+
+.Tech_header{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+
+.Tech_header::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #eb4a4a;
+    border-radius: 2px;
+}
+
+.Tcontainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+.skill-box{
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.skill-box:hover &gt; .skill-title:after, .skill-box:hover &gt; .skill-title:before{
+    width: 35px;
+}
+
+.skill-box:hover .tech_img{
+    transform: translateY(-10px);
+}
+
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.skill-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #eb4a4a;
+    transition: .5s;
+}
+
+.skill-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #eb4a4a;
+    transition: .5s;
+}
+
+.tech_img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.tech_img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+
+.skill-title h3{
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.skill-icon{
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 990px){
+    .Tcontainer{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
+}
+    
+@media screen and (max-width: 650px){
+    .Tcontainer{
+        grid-template-columns: 1fr;
+    }
+}
+
+  </style>
+  <script>
+    const header = document.querySelector(&quot;header&quot;);
+
+window.addEventListener (&quot;scroll&quot;, function() {
+    header.classList.toggle (&quot;sticky&quot;, window.scrollY &gt;0);
+});
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () =&gt; {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
+
+window.onscroll = () =&gt; {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
+
+const sr = ScrollReveal ({
+    distance: '25px',
+    duration: 250,
+    reset: true
+})
+
+sr.reveal('.home-text',{delay:190, origin:'bottom'})
+
+sr.reveal('.about,.services,.portfolio,.contact',{delay:200, origin:'bottom'})
+
+  </script>
+</head>
+<body>
+	<!---header--->
+	<header>
+        <h2 class="logo">Portfo<span>lio</span></h2>
+		<ul class="navbar">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About Me</a></li>
+			<li><a href="#experience">Experience</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#achievement">Achievements</a></li>
+			<li><a href="#portfolio">Projects</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</header>
+
+	<!---home--->
+	<section class="home" id="home">
+		<video autoplay loop muted plays-inline class="back-video">
+			<source src= type="video/mp4">
+		</video>
+		<div class="home-text">
+			<h4>Hello</h4>
+			<h1>I'm Suvira <br> <span>404</span></h1>
+			<h3>Software Developer and Programming Enthusiast </h3>
+           
+		</div>
+	</section>
+
+	<!---about--->
+	 <section class="about" id="about">
+		<div class="about-img">
+			<img src="C:\Users\suvir\OneDrive\Pictures\New folder (14)\About-Me-1024x1024.jpg">
+		</div>
+
+		<div class="about-text">
+			<h2>About Me</h2>
+			<h4>Hi, My name is Suvira!!</h4>
+			<p>I am a B.Tech Third Year Student of Walchand Institute Of Technology College, Pursuing My Degree in Information Technology . I have a keen Interest in Problems Solving and Finding new and Dynamic Ideas.</p><br>
+			<p>I am a Machine Learning Enthusiast & Front-end Web Developer. I can provide clean code and pixel perfect design.</p>
+			<div class="about-gri">
+				<div class="about-in">
+					<h5>1. Problem Solving</h5>
+				</div>
+
+				<div class="about-in">
+					<h5>2. DSA</h5>
+				</div>
+
+				<div class="about-in">
+					<h5>3. Machine Learning</h5>
+				</div>
+
+				<div class="about-in">
+					<h5>4. Web Development</h5>
+				</div>
+
+			</div>
+			<a href="#contact" class="btn">Contact Me</a>
+		</div>
+	</section>
+
+	<!-- Technical Languages -->
+	<div class="inner">
+        <div class="Tech_header">
+            <br>
+            <h1>Certificates</h1>
+            <br>
+
+
+        </div>
+        <div class="Tcontainer">
+			<div class="skills-content">
+				<div class="skill-title">
+					<div class="tech_img">
+						<img class="skills-content" src="C:\Users\suvir\OneDrive\Pictures\Resume\real C.jpeg" alt="C Programming Language">
+        
+                        
+					</div>  
+				</div>
+                <br> 
+                <br>
+                <a href="C:\Users\suvir\OneDrive\Pictures\Resume\real C.jpeg" download="real C"> C Certificate </a>
+			</div>
+            
+			<div class="skill-box">
+				<div class="skills-content">
+					<div class="tech_img">
+						<img class="skills-content" src="C:\Users\suvir\OneDrive\Pictures\Resume\C.jpeg" alt="C++ Programming Language">
+					</div>
+                    <br> 
+                    <br>
+                    <a href="file:///C:/Users/suvir/Downloads/CPP080%20Suvira%20Shital%20Patil.pdf" download="CPP080 Suvira Shital Patil"> C++ Certificate </a>
+				</div>
+			</div>
+			<div class="skill-box">
+				<div class="skills-content">
+					<div class="tech_img">
+						<img class="skills-content" src="C:\Users\suvir\OneDrive\Pictures\Resume\C.jpeg" alt="Power BI">
+					</div>
+                    <br> 
+                    <br>
+                    <a href="C:\Users\suvir\OneDrive\Pictures\Resume\PowerBI.jpg" download="PowerBI"> Power BI Certificate </a>
+				</div>
+			</div>
+            <div class="skill-box">
+                <div class="skills-content">
+                    <div class="tech_img">
+                        <img class="skills-content" src="C:\Users\suvir\OneDrive\Pictures\Resume\C.jpeg" alt="Css">
+                    </div>
+                    <br> 
+                    <a href="C:\Users\suvir\OneDrive\Pictures\Resume\SSO.jpeg" download="SSO"> SSO Certificate </a> 
+                </div>
+            </div>
+	    <div class="skill-box">
+            <div class="skills-content">
+                  <div class="tech_img">
+                    <img class="skills-content" src="C:\Users\suvir\OneDrive\Pictures\Resume\C.jpeg" al="Java">
+                  </div>
+                  <br> 
+                  <br>
+                  <a href="C:\Users\suvir\OneDrive\Pictures\Resume\java.jpeg" download="java"> Java Certificate </a>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skills-content">
+                    <div class="tech_img">
+                        <img class="skills-content" src="C:\Users\suvir\OneDrive\Pictures\Resume\C.jpeg" alt="Artifical Intelligance">
+                    </div>
+                    <br> 
+                    <br>
+                    <a href="C:\Users\suvir\OneDrive\Pictures\Resume\AI.jpeg" download="AI"> Artifical Intelligance Certificate </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+	<!-- -Experience- -->
+	<section class="experience" id="experience">
+		<div class="main-text">
+			<h2>My Experiences</h2>
+		</div>
+		<br>
+		<div class="experience-content">
+			<div class="box">
+				<img src="C:\Users\suvir\OneDrive\Pictures\New folder (8)\dev.jpg">
+				<h3>Website Developer</h3>
+				<h4>
+					<span>
+						Developer
+					</span>
+				</h4>
+				<br>
+				<p>
+					• Created Multiple Software Development Projects with their detailed Documentation.
+					<br>
+					• Worked with the Dynamic Team of GeeksforGeeks.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- -Skills- -->
+	<section class="skills" id="skills">
+		<div class="main-text">
+			<h2>My Skills</h2>
+		</div>
+
+		<div class="skills-content">
+			<div class="box">
+				<img src="C:\Users\suvir\OneDrive\Pictures\New folder (13)\comp.jpg" >
+				<h3>Competitive Programming</h3>
+				<p>
+					Competitive programming is a sport of coding, where individuals engage in solving algorithmic challenges against the clock, showcasing their problem-solving skills and efficiency in crafting elegant and optimized solutions.</p>
+			</div>
+
+			<div class="box">
+				<img src="C:\Users\suvir\OneDrive\Pictures\New folder (3)\th.jpg" >
+				<h3>Front-end Development</h3>
+				<p>Front-end development is the art of bringing digital creativity to life, focusing on the user interface and user experience to seamlessly merge design with functionality, shaping the visual and interactive elements of websites.</p>
+			</div>
+
+			
+		</div>
+	</section>
+
+	<!-- -Achievements- -->
+	<section class="achievement" id="achievement">
+		<div class="main-text">
+			<h2>My Achievements</h2>
+			<h4>Some of My Major Achievements</h4>
+		</div>
+
+		<div class="portfolio-content">
+			<div class="row">
+				<img src="C:\Users\suvir\OneDrive\Desktop\yahoo.jpg">
+				<div class="main-row">
+					<div class="row-text">
+						<h6> Created a company culture initiative that raised employee satisfaction rates by 25% YoY.</h6>
+					</div>
+				</div>
+				<h3>Yahoo </h3>
+			</div>
+			<div class="row">
+				<img src="C:\Users\suvir\OneDrive\Pictures\hackthan\Hackthan.jpg">
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Identifing and sloving complex problems</h6>
+					</div>
+				</div>
+				<h3>Details about the Hackathon </h3>
+			</div>
+			<div class="row">
+				<img src="C:\Users\suvir\OneDrive\Pictures\hacker\hackerrank.jpg">
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Maintained a 97% satisfaction rating over a 24-month period as a customer care representative.
+                            Exceeded retail sales goals by an average of 17% every quarter.
+                       </h6>
+					</div>
+				</div>
+				<h3>Ratings </h3>
+			</div>
+			
+		</div>
+	</section>
+	
+
+	<!-- -portfolio- -->
+	<section class="portfolio" id="portfolio">
+		<div class="main-text">
+			<h2>My Projects</h2>
+			<h4>Some Of My Distinguished Works</h4>
+		</div>
+
+		<div class="portfolio-content">
+			<div class="row">
+                <img src="C:\Users\suvir\OneDrive\Pictures\New folder (12)\fsyydyyde.jpg">
+				
+            </a>
+					<div class="main-row">
+					<div class="row-text">
+						<h6>Web App development</h6>
+					</div>
+				</div>
+				<h3> Management System</h3>
+			</div>
+
+			<div class="row">
+				
+					<img src="C:\Users\suvir\OneDrive\Pictures\New folder (10)\i.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Web App Development</h6>
+					</div>
+				</div>
+				<h3>Website Development</h3>
+			</div>
+			
+			<div class="row">
+				
+					<img src="C:\Users\suvir\OneDrive\Pictures\New folder (5)\web.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Machine Learning</h6>
+					</div>
+				</div>
+				<h3> Classification</h3>
+			</div>
+
+			<div class="row">
+				
+					<img src="C:\Users\suvir\OneDrive\Pictures\New folder (11)\tyt.jpg">
+				</a>
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Machine Learning</h6>
+					</div>
+				</div>
+				<h3> House Price Prediction</h3>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- -POR- -->
+	<section class="POR" id="POR">
+		<div class="main-text">
+			<h2>Position of Responsibilities</h2>
+			<h4>Some of My valunteer Work</h4>
+		</div>
+
+		<div class="portfolio-content">
+			<div class="row">
+				<img src="C:\Users\suvir\OneDrive\Pictures\Resume\chess.jpg">
+                
+					<div class="main-row">
+					<div class="row-text">
+						<h6>Chess Coordinator</h6>
+					</div>
+				</div>
+				<h3>College Chess Club</h3>
+			</div>
+
+			<div class="row">
+				<img src="C:\Users\suvir\OneDrive\Pictures\Resume\pary.png">
+				<div class="main-row">
+					<div class="row-text">
+						<h6>Paryushan Parv Event</h6>
+					</div>
+				</div>
+				<h3>Mentor</h3>
+			</div>
+		</div>
+	</section>
+
+	<!-- -contact- -->
+	<section class="contact" id="contact">
+		<div class="contact-text">
+			<h2>Contact Me</h2>
+			<h4>Let's Work Together</h4>
+			<p>I Will Give My Best .</p>
+			<div class="contact-list">
+				<li><a href="#">E-mail</a></li>
+				<li><a href="#">suvira1008@gmail.com</a></li>
+				<li><a href="#">8379931008</a></li>
+				<a href="mailto: suvira1008@gmail.com">
+					<button class="btn">
+						Let's Chat
+					</button>
+				</a>
+			</div>
+			<div class="contact-icons">
+				<a href="https://www.linkedin.com/in/suvira-patil-57b674259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+				<a href="https://patilsuvira" target="_blank"><i class='bx bxl-instagram' ></i></a>
+				<a href="https://www.geeksforgeeks.org/" target="_blank"><i class='bx bxl-github' ></i></a>
+				<a title="+91 8379931008"><i class='bx bxl-whatsapp' ></i></a>
+
+			</div>
+		</div> 
+	</section>
+
+	<!---scroll-top--->
+	<a href="#" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
+
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+	<!---custom js link--->
+	<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
